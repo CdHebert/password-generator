@@ -1,13 +1,10 @@
 // Assignment code here 
-var symbols = "!#$%&'()*+,-./:;<=>?@[]/^_`{|}~";
+var getRandomSymbol = "!#$%&'()*+,-./:;<=>?@[]/^_`{|}~";
+var getRandomLower = "abcdefghijklmnopqrstuvwxyz"
+var getRandomUpper = "ABCDEFGHIJOLMNOPQRSTUVWXYZ"
+var getRandomNumber = "0123456789"
 var collectCharacters = "";
 var passwordCollect = "";
-// charcode link - http://www.net-comber.com/charset.html
-var getRandomLower = String.fromCharCode(Math.floor(Math.random() * 26) + 97);
-var getRandomUpper = String.fromCharCode(Math.floor(Math.random() * 26) + 65);
-var getRandomNumber = String.fromCharCode(Math.floor(Math.random() * 10) + 48);
-var getRandomSymbols = symbols[Math.floor(Math.random() * symbols.length)];
-
 
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
@@ -22,7 +19,7 @@ function generatePassword() {
     var confrimLower = confirm("Do you want Lowercase letters?");
     var confirmNumber = confirm("Do you want Numbers?");
     var confirmSymbol = confirm("Do you want Symbols?");
-
+//console.log(confirmSymbol, confirmNumber, confirmUpper, confrimLower);
   
   if (confirmUpper === true) {
     collectCharacters = collectCharacters + getRandomUpper;
@@ -37,8 +34,9 @@ function generatePassword() {
   }
 
   if (confirmSymbol === true) {
-    collectCharacters = collectCharacters + getRandomSymbols;
+    collectCharacters = collectCharacters + getRandomSymbol;
   }
+  console.log(collectCharacters, passwordCollect);
   
   for (var i = 0; i < passwordLength; i++) {
     var value = Math.floor(Math.random() * collectCharacters.length);
@@ -66,3 +64,11 @@ function writePassword() {
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
 
+
+//if check < 8
+//if check > 129
+
+// confirm true/false want nums?
+// confirm true/false want lower?
+// confirm true/false want upper?
+// confirm true/false want special?
