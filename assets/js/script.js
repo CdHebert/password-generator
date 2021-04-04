@@ -18,7 +18,7 @@ function generatePassword() {
     var confirmUpper = confirm("Do you want uppercase letters?");
     var confrimLower = confirm("Do you want Lowercase letters?");
     var confirmNumber = confirm("Do you want Numbers?");
-    var confirmSymbol = confirm("Do you want Symbols?");
+    var confirmSymbol = confirm("Do you want Special Characters?");
 //console.log(confirmSymbol, confirmNumber, confirmUpper, confrimLower);
   
   if (confirmUpper === true) {
@@ -65,10 +65,3 @@ function writePassword() {
 generateBtn.addEventListener("click", writePassword);
 
 
-//if check < 8
-//if check > 129
-
-// confirm true/false want nums?
-// confirm true/false want lower?
-// confirm true/false want upper?
-// confirm true/false want special?
