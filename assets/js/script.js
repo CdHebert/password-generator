@@ -1,9 +1,9 @@
 // Assignment code here 
-var getRandomSymbol = "!#$%&'()*+,-./:;<=>?@[]/^_`{|}~";
-var getRandomLower = "abcdefghijklmnopqrstuvwxyz"
-var getRandomUpper = "ABCDEFGHIJOLMNOPQRSTUVWXYZ"
-var getRandomNumber = "0123456789"
-var collectCharacters = "";
+var getSymbol = "!#$%&'()*+,-./:;<=>?@[]/^_`{|}~";
+var getower = "abcdefghijklmnopqrstuvwxyz"
+var getUpper = "ABCDEFGHIJOLMNOPQRSTUVWXYZ"
+var getNumber = "0123456789"
+var collect = "";
 var passwordCollect = "";
 
 // Get references to the #generate element
@@ -22,19 +22,19 @@ function generatePassword() {
 //console.log(confirmSymbol, confirmNumber, confirmUpper, confrimLower);
   
   if (confirmUpper === true) {
-    collectCharacters = collectCharacters + getRandomUpper;
+    collectCharacters = collect + getUpper;
   }
 
   if (confrimLower === true) {
-    collectCharacters = collectCharacters + getRandomLower;
+    collectCharacters = collect + getLower;
   }
 
   if (confirmNumber === true) {
-    collectCharacters = collectCharacters + getRandomNumber;
+    collectCharacters = collect + getNumber;
   }
 
   if (confirmSymbol === true) {
-    collectCharacters = collectCharacters + getRandomSymbol;
+    collectCharacters = collect + getSymbol;
   }
   console.log(collectCharacters, passwordCollect);
   
